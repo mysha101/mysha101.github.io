@@ -129,8 +129,8 @@ bases.fromBase = function (str, base) {
 function parseNumber (number, decimal) {
     number = number + ''
     number = scientificNotationToString(number)
-    let a = number.indexOf('.') 
-    let f_count = 0 
+    let a = number.indexOf('.') //小数点位置
+    let f_count = 0 //小数位后位数
     if(a > 0){
         if(f_count > decimal){
             console.log('输入错误')
@@ -143,8 +143,8 @@ function parseNumber (number, decimal) {
     for(let i = 0; i < b; i++){
         c += '0'
     }
-    number = number.replace('.','')+c 
-    while(true){ 
+    number = number.replace('.','')+c //替换小数点，进行补0
+    while(true){ //删除掉数字前面的0
         if(number[0] == '0'){
             number = number.slice(1)
         }else{
@@ -154,20 +154,20 @@ function parseNumber (number, decimal) {
     return bases.toBase(bases.fromBase(number,10),16)
 }
 
-
+//科学计数法处理
 function scientificNotationToString(param) {
     let strParam = String(param)
     let flag = /e/.test(strParam)
     if (!flag) return param
 
-    
+    // 指数符号 true: 正，false: 负
     let sysbol = true
     if (/e-/.test(strParam)) {
         sysbol = false
     }
-    
+    // 指数
     let index = Number(strParam.match(/\d+$/)[0])
-   
+    // 基数
     let basis = strParam.match(/^[\d\.]+/)[0].replace(/\./, '')
 
     if (sysbol) {
@@ -177,7 +177,7 @@ function scientificNotationToString(param) {
     }
 }
 
-
+//结果转进制
 function filter (res) {
   let str;
   if(res.indexOf("0x") != -1){
@@ -203,7 +203,7 @@ function add0(m){
   return m<10?'0'+m:m
 }
 
-
+//时间转换
 function filterTime (num) {
   let time = new Date(num*1000);
   let y = time.getFullYear();
