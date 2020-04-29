@@ -1,13 +1,90 @@
 [
 	{
-		"constant": false,
+		"constant": true,
 		"inputs": [
 			{
-				"name": "_add",
+				"name": "_address_",
 				"type": "address"
 			}
 		],
-		"name": "updatev2",
+		"name": "isExitsReferrer",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_pAddress_",
+				"type": "address"
+			},
+			{
+				"name": "_referrer_",
+				"type": "address"
+			}
+		],
+		"name": "getRefLimit",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "started",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "roundOpen",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -16,12 +93,264 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "extensioninfo",
+		"name": "dyFloor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_address_",
+				"type": "address"
+			}
+		],
+		"name": "referrer",
 		"outputs": [
 			{
 				"name": "",
 				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "round",
+		"outputs": [
+			{
+				"name": "end",
+				"type": "uint256"
 			},
+			{
+				"name": "strt",
+				"type": "uint256"
+			},
+			{
+				"name": "pot",
+				"type": "uint256"
+			},
+			{
+				"name": "ended",
+				"type": "bool"
+			},
+			{
+				"name": "maxRefs",
+				"type": "uint256"
+			},
+			{
+				"name": "maxRefsAddress",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_address_",
+				"type": "address"
+			}
+		],
+		"name": "referrerQuantity",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "remainTime",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "player",
+		"outputs": [
+			{
+				"name": "addr",
+				"type": "address"
+			},
+			{
+				"name": "win",
+				"type": "uint256"
+			},
+			{
+				"name": "gen",
+				"type": "uint256"
+			},
+			{
+				"name": "dy",
+				"type": "uint256"
+			},
+			{
+				"name": "t",
+				"type": "uint256"
+			},
+			{
+				"name": "curjoin",
+				"type": "uint256"
+			},
+			{
+				"name": "tdy",
+				"type": "uint256"
+			},
+			{
+				"name": "lastFixResTime",
+				"type": "uint256"
+			},
+			{
+				"name": "fixResCount",
+				"type": "uint256"
+			},
+			{
+				"name": "incomeLimit",
+				"type": "uint256"
+			},
+			{
+				"name": "invtimes",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_addr_",
+				"type": "address"
+			}
+		],
+		"name": "getPlayerInfo",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "poitProfit",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getCurrentRoundInfo",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_pAddress_",
+				"type": "address"
+			}
+		],
+		"name": "isIcmFnd",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "poltime",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "stcPerior",
+		"outputs": [
 			{
 				"name": "",
 				"type": "uint256"
@@ -33,8 +362,132 @@
 	},
 	{
 		"constant": false,
+		"inputs": [
+			{
+				"name": "_referrer_",
+				"type": "address"
+			}
+		],
+		"name": "publicReferral",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
 		"inputs": [],
-		"name": "settle",
+		"name": "setted",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "rID",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_address_",
+				"type": "address"
+			}
+		],
+		"name": "isCanRegist",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "receive",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "playerRnds",
+		"outputs": [
+			{
+				"name": "refs",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_round_",
+				"type": "uint256"
+			}
+		],
+		"name": "getHisRoundInfo",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_referrer_",
+				"type": "address"
+			}
+		],
+		"name": "play",
 		"outputs": [],
 		"payable": true,
 		"stateMutability": "payable",
@@ -42,513 +495,45 @@
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "add_",
-				"type": "address"
-			},
-			{
-				"name": "parent_",
-				"type": "address"
-			},
-			{
-				"name": "in_number_",
-				"type": "uint256"
-			},
-			{
-				"name": "ambassador_",
-				"type": "uint256[3]"
-			},
-			{
-				"name": "node_",
-				"type": "uint256[3]"
-			},
-			{
-				"name": "jackpot_",
-				"type": "uint256[3]"
-			},
-			{
-				"name": "spw_",
-				"type": "uint256[3]"
-			},
-			{
-				"name": "dpw_",
-				"type": "uint256[3]"
-			},
-			{
-				"name": "proft_cum_",
-				"type": "uint256"
-			},
-			{
-				"name": "fuel_",
-				"type": "uint256"
-			}
-		],
-		"name": "insertuser",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add",
-				"type": "address"
-			}
-		],
-		"name": "updatev4",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add",
-				"type": "address"
-			}
-		],
-		"name": "updatev1",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
 		"inputs": [],
-		"name": "win_two",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[5]"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "index",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256[11]"
-			},
-			{
-				"name": "",
-				"type": "bytes32"
-			},
-			{
-				"name": "",
-				"type": "bytes2"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add",
-				"type": "address"
-			}
-		],
-		"name": "updateAccount",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "add_",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "updaterate",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add1",
-				"type": "address"
-			},
-			{
-				"name": "_add2",
-				"type": "address[5]"
-			},
-			{
-				"name": "_add3",
-				"type": "address[10]"
-			}
-		],
-		"name": "updatewinadd",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "small_value",
-				"type": "uint256"
-			},
-			{
-				"name": "big_value",
-				"type": "uint256"
-			}
-		],
-		"name": "updatepoolrate",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "myteam",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256[4]"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add",
-				"type": "address"
-			},
-			{
-				"name": "_type",
-				"type": "uint256"
-			}
-		],
-		"name": "updatevambassador",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "updatebiginfo",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "profit",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256[16]"
-			},
-			{
-				"name": "",
-				"type": "bool"
-			},
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "withdrawgas",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "destroy",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "nodestatistics",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "statistics",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add",
-				"type": "address"
-			}
-		],
-		"name": "deletenode",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "win_third",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[10]"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "myprofit",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256[13]"
-			},
-			{
-				"name": "",
-				"type": "bool"
-			},
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "win_one",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_add",
-				"type": "address"
-			}
-		],
-		"name": "updatev3",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "add",
-				"type": "address"
-			}
-		],
-		"name": "deposit",
+		"name": "donate",
 		"outputs": [],
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
-		"payable": true,
-		"stateMutability": "payable",
+		"name": "zeroPerior",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "bootstrap",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "fallback"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "src",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "wad",
-				"type": "uint256"
-			}
-		],
-		"name": "Withdrawal",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "wad",
-				"type": "uint256"
-			}
-		],
 	}
 ]
