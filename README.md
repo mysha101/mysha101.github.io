@@ -42,6 +42,6 @@
 //  │  ░░░░░░░░░░░░░░░░░░░░░░   ╚═╝   ╚ └┘╚═╝╚═╝└┘╚═╝╚═╝    ░░░░░░░░░░░░░░░░░░░░░░  │                     
 //  │      ┌──────────┐               ┌─────────┐             ┌────────┐            │
 //  └──────┤   Fair   ├───────────────┤ Justice ├─────────────┤  Overt ├────────────┘
-//          └──────────┘               └─────────┘             └────────┘
+//         └──────────┘               └─────────┘             └────────┘
 //This product is protected under license.  Any unauthorized copy, modification, or use without 
 //express written consent from the creators is prohibited.
