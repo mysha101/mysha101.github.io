@@ -1,1 +1,1 @@
-!+[]+()http://github.com/自己的用户名/项目名/raw/分支名/存放图片的文件夹/文件夹里的图片名字
+!+[]+()http://github.com/fairgogame/fairgogame.github.io/blob/master/fairgo.png
