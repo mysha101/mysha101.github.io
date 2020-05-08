@@ -2,7 +2,7 @@
 
 ## About FAIRGO
 
-Fairgo is a code-as-law blockchain game that optimizes pareto.see [https://fairgogame.github.io](https://fairgogame.github.io/).
+Fairgo is a blockchain game where code is law， that optimizes pareto.see [https://fairgogame.github.io](https://fairgogame.github.io/).
 
 ## Rule 
 
